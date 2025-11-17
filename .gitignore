@@ -1,0 +1,19 @@
+
+# Datos en general
+*.xlsx
+*.csv
+
+# Cosas de R
+.Rhistory
+.Rproj.user/
+.RData
+
+# Cosas de Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Otros
+.DS_Store
+*.log

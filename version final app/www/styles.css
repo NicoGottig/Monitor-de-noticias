@@ -1,0 +1,137 @@
+/* ====== Fuentes ====== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+/* ====== Variables de color ====== */
+:root{
+  --bg:#181A1B; 
+  --grid:#303030; 
+  --text:#D6D9E0; 
+  --border:#BBBBBB; 
+  --detail:#23262B; 
+  --primary:#69A5E6;
+  --neg:#E1604B; 
+  --neu:#B8BFC7; 
+  --pos:#69A5E6;
+}
+
+/* ====== Base ====== */
+html, body {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+}
+a { color: var(--primary) !important; }
+hr { border-color: var(--detail) !important; }
+
+/* ====== Tipografías ======
+   Solo h1/h2 en Roboto; TODO lo demás en Inter.
+*/
+h1.page-title,
+h2.section-title {
+  font-weight: 700 !important;
+  font-family: 'Roboto', 'Inter', system-ui, -apple-system, Segoe UI, Arial, sans-serif !important;
+}
+
+/* Fuerzo Inter en toda la prosa y UI */
+.descripcion, .lead-descr,
+.section-wrap .descripcion, .section-wrap p,
+p, label, .control-label,
+.form-control, .selectize-input, .picker,
+.btn, .irs, .item-meta, .item-titulo a,
+.box-titulos {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Refuerzo específico para el bloque del header */
+.site-header .lead-descr,
+.site-header .descripcion {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* Notas aclaratorias en EB Garamond */
+.nota-italica {
+  font-family: 'EB Garamond', serif !important;
+  font-style: italic !important;
+  font-size: 0.95rem !important;
+  color: #C9CDD6 !important;
+  line-height: 1.35;
+}
+
+/* ====== Layout ====== */
+.section-wrap { max-width:1100px; margin:0 auto 25px auto; padding-left:16px; padding-right:16px; }
+.section-title { margin-top:32px; margin-bottom:14px; }
+.page-title { margin-bottom: 10px; text-wrap: balance; }
+
+.site-header { margin-top: 60px; padding-top: 20px; border-top: 2px solid #fff; }
+.site-header .page-title, 
+.site-header .lead-descr { background-color: rgba(255, 255, 255, 0.05); padding: 8px 12px; border-radius: 6px; }
+.lead-descr { margin-top: 6px; margin-bottom: 6px; }
+
+.descripcion, p {
+  text-align: justify; text-justify: inter-word;
+  hyphens: auto; -webkit-hyphens: auto; -ms-hyphens: auto;
+  overflow-wrap: anywhere; word-spacing: normal;
+}
+
+/* ====== Inputs (dark) ====== */
+input, .form-control, .selectize-input, .picker {
+  background:#212326 !important; color:#ECECEC !important; 
+  border:2px solid var(--detail) !important; border-radius:0 !important;
+}
+.action-button, .btn, .btn-group .btn {
+  border:2px solid var(--border) !important; border-radius:0 !important;
+  color:var(--text) !important; background:var(--bg) !important;
+}
+.action-button:hover, .btn:hover { background:var(--border) !important; color:var(--bg) !important; }
+.btn-check:checked + .btn, .btn.active {
+  background:var(--border) !important; color:var(--bg) !important; border-color:var(--border) !important;
+}
+
+/* Sliders (ion.rangeSlider) */
+.irs-min, .irs-max, .irs-single { border-radius:0 !important; padding:4px !important; top:2px !important; background:#32343B !important; color:var(--text) !important; }
+.irs-line { background:var(--detail) !important; height:2px !important; }
+.irs-bar  { display:none !important; }
+.irs-handle { border-radius:0 !important; width:19px !important; height:19px !important; border:2px solid var(--border) !important; background:var(--bg) !important; margin-top:0.5px !important; }
+.irs-handle:hover { background:var(--border) !important; }
+
+/* Caja de títulos */
+.box-titulos { border:2px solid var(--border); padding:14px; background:var(--bg); max-height:420px; overflow-y:auto; }
+.item-titulo { margin-bottom:10px; }
+.item-titulo a { color:var(--text) !important; text-decoration:none; }
+.item-meta { color:#B6BAC5; font-size:12px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width:10px; background:var(--bg); }
+::-webkit-scrollbar-thumb { background:#282C31; border-radius:5px; }
+
+/* Waiter */
+.waiter-overlay-content { text-align:center; }
+.spinkit > div { filter: drop-shadow(0 0 10px rgba(105,165,230,.35)); }
+
+/* Responsive */
+@media (max-width: 576px){
+  .site-header{ margin-top:42px; }
+  .section-title{ margin-top:20px; }
+  .lead-descr{ font-size:17px; }
+}
+
+
+/* === Override: descripciones en EB Garamond (pisa cualquier herencia) === */
+.lead-descr,
+.descripcion,
+.section-wrap .descripcion {
+  font-family: 'EB Garamond', serif !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+
+}
+

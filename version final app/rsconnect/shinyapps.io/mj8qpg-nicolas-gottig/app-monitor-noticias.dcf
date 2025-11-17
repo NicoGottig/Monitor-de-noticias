@@ -1,0 +1,12 @@
+name: app-monitor-noticias
+title: app-monitor-noticias
+username: mj8qpg-nicolas-gottig
+account: mj8qpg-nicolas-gottig
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 15184505
+bundleId: 10759076
+url: https://mj8qpg-nicolas-gottig.shinyapps.io/app-monitor-noticias/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
